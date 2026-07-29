@@ -1,0 +1,39 @@
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+sdist
+develop-eggs
+.installed.cfg
+
+# Python cache
+__pycache__
+
+# Logs
+pip-log.txt
+flask.log
+
+# Tests
+.coverage
+.tox
+nosetests.xml
+
+# Virtual environment
+venv
+.env
+.env-mysql
+
+# Git
+.git
+.gitignore
+
+# Database
+*.sqlite
