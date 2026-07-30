@@ -15,9 +15,9 @@ COPY app app
 COPY migrations migrations
 COPY flasky.py config.py boot.sh ./
 
-RUN chown -R flasky:flasky ./
+RUN sed -i 's/\r$//' boot.sh
+RUN chown -R flasky:flasky ./ && chmod +x boot.sh
 USER flasky
-RUN chmod +x boot.sh
 
 EXPOSE 5000
 ENTRYPOINT ["./boot.sh"]
