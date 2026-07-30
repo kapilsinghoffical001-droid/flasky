@@ -13,6 +13,7 @@ RUN venv/bin/pip install -r requirements/docker.txt
 
 COPY app app
 COPY migrations migrations
+COPY tests tests
 COPY flasky.py config.py boot.sh ./
 
 RUN sed -i 's/\r$//' boot.sh
