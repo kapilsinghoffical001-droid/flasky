@@ -34,7 +34,7 @@ class DevelopmentConfig(Config):
 
 class TestingConfig(Config):
     TESTING = True
-     MAIL_SUPPRESS_SEND = True
+    MAIL_SUPPRESS_SEND = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or \
         'sqlite://'
     WTF_CSRF_ENABLED = False
