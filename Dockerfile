@@ -20,4 +20,4 @@ RUN chown -R flasky:flasky ./ && chmod +x boot.sh
 USER flasky
 
 EXPOSE 5000
-ENTRYPOINT ["./boot.sh"]
+ENTRYPOINT ["bash", "./boot.sh"]
