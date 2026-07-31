@@ -3,7 +3,7 @@ FROM python:3.6-slim
 ENV FLASK_APP=flasky.py
 ENV FLASK_CONFIG=production
 
-RUN useradd -m flasky
+RUN id -u flasky >/dev/null 2>&1 || useradd -m flasky
 WORKDIR /home/flasky
 
 COPY requirements requirements
